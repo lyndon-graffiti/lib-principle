@@ -37,6 +37,8 @@
 
   __webpack_require__("./src/index.js");
 })({
+  // 使用 eval 来包裹每个模块的代码，是在浏览器中，会为每个 eval 模块单独开一个空间，方便排查错误
+  // eval 的模块所在位置提示写法：//# sourceURL=webapck:///./src/index.js，指定为 webpack 构建
   "./src/index.js": (module, exports, __webpack_require__) => {
     console.log("index module");
     // 采用 CommonJS 的导入方法

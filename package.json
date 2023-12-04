@@ -1,0 +1,23 @@
+{
+  "name": "lib-principle",
+  "version": "1.0.0",
+  "description": "think the libs, write the principle of them",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lyndon-learn/lib-principle.git"
+  },
+  "keywords": [
+    "lib",
+    "principle"
+  ],
+  "author": "wuxianzhi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lyndon-learn/lib-principle/issues"
+  },
+  "homepage": "https://github.com/lyndon-learn/lib-principle#readme"
+}

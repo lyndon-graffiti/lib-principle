@@ -1,1 +1,1 @@
-# webpack-principle
+# lib-principle

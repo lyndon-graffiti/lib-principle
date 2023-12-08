@@ -41,7 +41,7 @@
   // eval 的模块所在位置提示写法：//# sourceURL=webapck:///./src/index.js，指定为 webpack 构建
   "./src/index.js": (module, exports, __webpack_require__) => {
     console.log("index module");
-    // 采用 CommonJS 的导入方法
+    // 采用 CommonJS 的导入方法，也是构建过程中的替换依赖函数，保存转换后的代码
     const a = __webpack_require__("./src/a.js");
     console.log(a);
   },

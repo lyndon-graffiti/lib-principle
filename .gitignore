@@ -1,5 +1,6 @@
 out
 dist
 .cache
-node_modules/
+coverage
+node_modules
 

@@ -40,7 +40,7 @@ module.exports = {
     noParse: /test\.js$/,
   },
   resolve: {
-    module: ["node_modules"], // 模块查找的位置
+    modules: ["node_modules"], // 模块查找的位置
     extensions: [".js", ".json"], // 可以自动补全后缀
     alias: {
       "@": path.resolve(__dirname, "src"),

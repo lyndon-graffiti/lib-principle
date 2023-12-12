@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/lyndon-learn/lib-principle/issues"
   },
-  "homepage": "https://github.com/lyndon-learn/lib-principle#readme"
+  "homepage": "https://github.com/lyndon-learn/lib-principle#readme",
+  "devDependencies": {
+    "@types/node": "^20.10.4"
+  }
 }

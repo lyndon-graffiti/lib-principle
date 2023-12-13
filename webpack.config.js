@@ -61,6 +61,9 @@ module.exports = {
   // 带有 apply 方法的对象，在 compiler 对象构建完成后执行 apply 方法
   plugins: [
     new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      template: "./public/index.html",
+    }),
     new CopyWebpackPlugin({
       patterns: [
         {
@@ -68,9 +71,6 @@ module.exports = {
           to: "./",
         },
       ],
-    }),
-    new HtmlWebpackPlugin({
-      template: "./public/index.html",
     }),
   ],
 };

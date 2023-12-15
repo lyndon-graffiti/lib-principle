@@ -4,7 +4,7 @@
   "description": "think the libs, write the principle of them",
   "main": "index.js",
   "scripts": {
-    "webpack:dev": "webpack",
+    "webpack:dev": "webpack-dev-server",
     "webpack:build": "webpack --mode=production"
   },
   "repository": {
@@ -27,9 +27,12 @@
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.8.1",
+    "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.3",
     "style-loader": "^3.3.3",
+    "url-loader": "^4.1.1",
     "webpack": "^5.89.0",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
   }
 }

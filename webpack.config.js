@@ -11,6 +11,7 @@ module.exports = {
     // 三方库的方式，在引入 js 后，在全局中可以使用
     library: "xianzhiwu",
     libraryTarget: "var",
+    publicPath: "/",
     filename: "[name].[chunkhash:5].js",
     path: path.resolve(__dirname, "./dist"),
   },
@@ -38,6 +39,23 @@ module.exports = {
         // 默认模块对应的 loader 为 []，在 rules 中，从上往下匹配时，test 符合条件，就加入执行数组，最后从 后 -> 前 执行数组
         use: ["css-loader"],
       },
+      {
+        // 输出成文件到 images 文件夹中，hash 为 contentHash 是 file-loader 控制的，缓存和避免重名
+        test: /\.(png)|(gif)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "images/[name].[hash:5].[ext]",
+            },
+          },
+        ],
+      },
+      {
+        // 图片变成 base64 格式
+        test: /\.(jpg)|(jpeg)$/,
+        use: ["url-loader"],
+      },
     ],
     // 在编译过程中，直接读取文件内容，不做 AST 抽象语法树分析，不解析依赖
     // 不根据 dependencies 的内容递归加载模块，用来忽略大型的单模块库（没有依赖），类似 /jquery/
@@ -64,13 +82,23 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./public/index.html",
     }),
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: "./public",
-          to: "./",
-        },
-      ],
-    }),
+    // new CopyWebpackPlugin({
+    //   patterns: [
+    //     {
+    //       from: "./public",
+    //       to: "./",
+    //     },
+    //   ],
+    // }),
   ],
+  devServer: {
+    port: 8080,
+    open: true,
+    proxy: {
+      "/api": {
+        target: "http://open.duyiedu.com",
+        changeOrigin: true, // 更改请求头中的 host & origin
+      },
+    },
+  },
 };

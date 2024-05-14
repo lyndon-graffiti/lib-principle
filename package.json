@@ -1,0 +1,26 @@
+{
+  "name": "lib-principle",
+  "version": "1.0.0",
+  "description": "some libs what is learned by me",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lyndon-graffiti/lib-principle.git"
+  },
+  "keywords": [
+    "lib"
+  ],
+  "author": "wuxianzhi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lyndon-graffiti/lib-principle/issues"
+  },
+  "homepage": "https://github.com/lyndon-graffiti/lib-principle#readme",
+  "devDependencies": {
+    "tslib": "^2.6.2",
+    "typescript": "^5.4.5"
+  }
+}
